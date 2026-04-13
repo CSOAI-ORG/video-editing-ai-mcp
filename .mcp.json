@@ -1,0 +1,24 @@
+{
+  "name": "video-editing-ai-mcp",
+  "description": "MEOK AI Labs \u2014 AI-powered video editing toolkit for scene analysis, subtitle generation,",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/video-editing-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "split_scenes",
+    "generate_subtitles",
+    "thumbnail_data",
+    "recommend_color_grading",
+    "convert_aspect_ratio"
+  ],
+  "categories": [
+    "Media",
+    "Video"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
