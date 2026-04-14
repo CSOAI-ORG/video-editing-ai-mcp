@@ -376,8 +376,7 @@ def _aspect_ratio_convert(source_ratio: str, target_ratio: str,
 # ---------------------------------------------------------------------------
 mcp = FastMCP(
     "Video Editing AI MCP",
-    instructions="AI-powered video editing toolkit: scene splitting, subtitle generation, thumbnail planning, color grading, and aspect ratio conversion. By MEOK AI Labs.",
-)
+    instructions="AI-powered video editing toolkit: scene splitting, subtitle generation, thumbnail planning, color grading, and aspect ratio conversion. By MEOK AI Labs.")
 
 
 @mcp.tool()
