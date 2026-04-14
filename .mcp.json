@@ -1,24 +1,128 @@
 {
   "name": "video-editing-ai-mcp",
-  "description": "MEOK AI Labs \u2014 AI-powered video editing toolkit for scene analysis, subtitle generation,",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/video-editing-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "split_scenes",
-    "generate_subtitles",
-    "thumbnail_data",
-    "recommend_color_grading",
-    "convert_aspect_ratio"
-  ],
-  "categories": [
-    "Media",
-    "Video"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "split_scenes",
+      "description": "Analyze video metadata and produce scene split points with timestamps",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "duration_seconds": {
+            "type": "number"
+          },
+          "scene_type": {
+            "type": "string"
+          },
+          "fps": {
+            "type": "number"
+          },
+          "sensitivity": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "duration_seconds"
+        ]
+      }
+    },
+    {
+      "name": "generate_subtitles",
+      "description": "Generate timed subtitles (SRT format) from a transcript. Automatically",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "transcript": {
+            "type": "string"
+          },
+          "duration_seconds": {
+            "type": "number"
+          },
+          "style": {
+            "type": "string"
+          },
+          "max_chars_per_line": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "transcript",
+          "duration_seconds"
+        ]
+      }
+    },
+    {
+      "name": "thumbnail_data",
+      "description": "Generate thumbnail selection recommendations including best timestamps,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "duration_seconds": {
+            "type": "number"
+          },
+          "scene_count": {
+            "type": "integer"
+          },
+          "style": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "duration_seconds"
+        ]
+      }
+    },
+    {
+      "name": "recommend_color_grading",
+      "description": "Recommend color grading settings based on genre, mood, and lighting",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {
+            "type": "string"
+          },
+          "mood": {
+            "type": "string"
+          },
+          "lighting": {
+            "type": "string"
+          },
+          "custom_adjustments": {
+            "type": "object"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "convert_aspect_ratio",
+      "description": "Plan an aspect ratio conversion with detailed crop/pad calculations,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source_ratio": {
+            "type": "string"
+          },
+          "target_ratio": {
+            "type": "string"
+          },
+          "source_width": {
+            "type": "integer"
+          },
+          "source_height": {
+            "type": "integer"
+          },
+          "strategy": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
 }

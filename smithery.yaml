@@ -1,10 +1,82 @@
 name: video-editing-ai-mcp
-description: "MEOK AI Labs — AI-powered video editing toolkit for scene analysis, subtitle generation,"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/video-editing-ai-mcp
-license: MIT
-categories: [Media, Video]
-tags: [video-editing, video-processing, ffmpeg, video-conversion, media-production]
-runtime: python
-entrypoint: server.py
+description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+version: 1.0.0
+tools:
+- name: split_scenes
+  description: Analyze video metadata and produce scene split points with timestamps
+  parameters:
+  - name: duration_seconds
+    type: number
+    required: true
+  - name: scene_type
+    type: string
+    required: false
+  - name: fps
+    type: number
+    required: false
+  - name: sensitivity
+    type: number
+    required: false
+- name: generate_subtitles
+  description: Generate timed subtitles (SRT format) from a transcript. Automatically
+  parameters:
+  - name: transcript
+    type: string
+    required: true
+  - name: duration_seconds
+    type: number
+    required: true
+  - name: style
+    type: string
+    required: false
+  - name: max_chars_per_line
+    type: integer
+    required: false
+- name: thumbnail_data
+  description: Generate thumbnail selection recommendations including best timestamps,
+  parameters:
+  - name: title
+    type: string
+    required: true
+  - name: duration_seconds
+    type: number
+    required: true
+  - name: scene_count
+    type: integer
+    required: false
+  - name: style
+    type: string
+    required: false
+- name: recommend_color_grading
+  description: Recommend color grading settings based on genre, mood, and lighting
+  parameters:
+  - name: genre
+    type: string
+    required: false
+  - name: mood
+    type: string
+    required: false
+  - name: lighting
+    type: string
+    required: false
+  - name: custom_adjustments
+    type: object
+    required: false
+- name: convert_aspect_ratio
+  description: Plan an aspect ratio conversion with detailed crop/pad calculations,
+  parameters:
+  - name: source_ratio
+    type: string
+    required: false
+  - name: target_ratio
+    type: string
+    required: false
+  - name: source_width
+    type: integer
+    required: false
+  - name: source_height
+    type: integer
+    required: false
+  - name: strategy
+    type: string
+    required: false

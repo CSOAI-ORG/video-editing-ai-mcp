@@ -11,6 +11,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import hashlib
 import json
 import math
@@ -381,7 +386,7 @@ mcp = FastMCP(
 
 @mcp.tool()
 def split_scenes(duration_seconds: float, scene_type: str = "dialogue",
-                 fps: float = 24.0, sensitivity: float = 0.5) -> dict:
+                 fps: float = 24.0, sensitivity: float = 0.5, api_key: str = "") -> dict:
     """Analyze video metadata and produce scene split points with timestamps
     and frame numbers. Useful for automatic chapter markers or editing cuts.
 
@@ -391,6 +396,10 @@ def split_scenes(duration_seconds: float, scene_type: str = "dialogue",
         fps: Frames per second of the source video (default: 24)
         sensitivity: Detection sensitivity 0.1-1.0 (higher = more cuts)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -402,7 +411,7 @@ def split_scenes(duration_seconds: float, scene_type: str = "dialogue",
 
 @mcp.tool()
 def generate_subtitles(transcript: str, duration_seconds: float,
-                       style: str = "standard", max_chars_per_line: int = 42) -> dict:
+                       style: str = "standard", max_chars_per_line: int = 42, api_key: str = "") -> dict:
     """Generate timed subtitles (SRT format) from a transcript. Automatically
     splits text into readable chunks with proper timing.
 
@@ -412,6 +421,10 @@ def generate_subtitles(transcript: str, duration_seconds: float,
         style: Subtitle style (standard, bold, minimal, karaoke)
         max_chars_per_line: Maximum characters per subtitle line (default: 42)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -423,7 +436,7 @@ def generate_subtitles(transcript: str, duration_seconds: float,
 
 @mcp.tool()
 def thumbnail_data(title: str, duration_seconds: float, scene_count: int = 5,
-                   style: str = "vlog") -> dict:
+                   style: str = "vlog", api_key: str = "") -> dict:
     """Generate thumbnail selection recommendations including best timestamps,
     composition tips, and text overlay configuration.
 
@@ -433,6 +446,10 @@ def thumbnail_data(title: str, duration_seconds: float, scene_count: int = 5,
         scene_count: Number of distinct scenes in the video
         style: Video style (gaming, tutorial, vlog, review, news)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -445,7 +462,7 @@ def thumbnail_data(title: str, duration_seconds: float, scene_count: int = 5,
 @mcp.tool()
 def recommend_color_grading(genre: str = "cinematic", mood: str = "neutral",
                             lighting: str = "natural",
-                            custom_adjustments: dict = {}) -> dict:
+                            custom_adjustments: dict = {}, api_key: str = "") -> dict:
     """Recommend color grading settings based on genre, mood, and lighting
     conditions. Returns contrast, saturation, temperature, LUT suggestions,
     and color wheel settings.
@@ -456,6 +473,10 @@ def recommend_color_grading(genre: str = "cinematic", mood: str = "neutral",
         lighting: Lighting condition (natural, studio, low_light, harsh, golden_hour, mixed)
         custom_adjustments: Optional overrides as {setting: value}
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -468,7 +489,7 @@ def recommend_color_grading(genre: str = "cinematic", mood: str = "neutral",
 @mcp.tool()
 def convert_aspect_ratio(source_ratio: str = "16:9", target_ratio: str = "9:16",
                          source_width: int = 1920, source_height: int = 1080,
-                         strategy: str = "smart_crop") -> dict:
+                         strategy: str = "smart_crop", api_key: str = "") -> dict:
     """Plan an aspect ratio conversion with detailed crop/pad calculations,
     content preservation percentage, and FFmpeg command hints.
 
@@ -479,6 +500,10 @@ def convert_aspect_ratio(source_ratio: str = "16:9", target_ratio: str = "9:16",
         source_height: Source video height in pixels
         strategy: Conversion strategy (crop, letterbox, smart_crop, stretch, fill_blur)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
