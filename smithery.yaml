@@ -1,5 +1,6 @@
 name: video-editing-ai-mcp
-description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+description: 'AI-powered video editing toolkit: scene splitting, subtitle generation,
+  thumbnail planning, color gr'
 version: 1.0.0
 tools:
 - name: split_scenes
