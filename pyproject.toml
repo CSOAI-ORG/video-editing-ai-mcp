@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/video-editing-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+video_editing_ai_mcp = "server:main"
