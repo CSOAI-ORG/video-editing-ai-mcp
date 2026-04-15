@@ -1,0 +1,58 @@
+{
+  "name": "Video Editing AI MCP",
+  "description": "AI-powered video editing toolkit: scene splitting, subtitle generation, thumbnail planning, color grading, and aspect ratio conversion. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/video-editing-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "split_scenes",
+      "description": "Analyze video metadata and produce scene split points with timestamps"
+    },
+    {
+      "name": "generate_subtitles",
+      "description": "Generate timed subtitles (SRT format) from a transcript. Automatically"
+    },
+    {
+      "name": "thumbnail_data",
+      "description": "Generate thumbnail selection recommendations including best timestamps,"
+    },
+    {
+      "name": "recommend_color_grading",
+      "description": "Recommend color grading settings based on genre, mood, and lighting"
+    },
+    {
+      "name": "convert_aspect_ratio",
+      "description": "Plan an aspect ratio conversion with detailed crop/pad calculations,"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Content & Media",
+    "Web & UX"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
