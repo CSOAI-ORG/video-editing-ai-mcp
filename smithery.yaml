@@ -1,6 +1,6 @@
 name: video-editing-ai-mcp
-description: 'AI-powered video editing toolkit: scene splitting, subtitle generation,
-  thumbnail planning, color gr'
+description: 'Video Editing Ai MCP server. Tools: split scenes, generate subtitles,
+  thumbnail data. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: split_scenes
