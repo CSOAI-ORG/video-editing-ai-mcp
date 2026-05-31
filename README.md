@@ -1,53 +1,78 @@
-# Video Editing AI MCP Server
-**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+# Video Editing Ai MCP
 
-AI-powered video editing toolkit: scene splitting, subtitle generation, thumbnail planning, color grading, and aspect ratio conversion.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/video_editing_ai_mcp/)
 
-## Tools
+> AI-powered video editing toolkit: scene splitting, subtitle generation, thumbnail planning, color...
 
-| Tool | Description |
-|------|-------------|
-| `split_scenes` | Detect and split video into scenes with timestamps and frame numbers |
-| `generate_subtitles` | Generate timed SRT subtitles from a transcript |
-| `thumbnail_data` | Recommend thumbnail timestamps, composition, and text overlays |
-| `recommend_color_grading` | Color grading settings based on genre, mood, and lighting |
-| `convert_aspect_ratio` | Plan aspect ratio conversion with crop/pad calculations |
+AI-powered video editing toolkit: scene splitting, subtitle generation, thumbnail planning, color grading, and aspect ratio conversion. By MEOK AI Labs.
 
-## Installation
+---
+
+## 🚀 Quick Start
 
 ```bash
-pip install mcp
+# Install via pip
+pip install video_editing_ai_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install video-editing-ai-mcp --client claude
 ```
 
-## Usage
+## ✨ Features
 
-### Run the server
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-```bash
-python server.py
-```
+## 📖 Documentation
 
-### Claude Desktop config
+- [Full Documentation](https://docs.meok.ai/video-editing-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-```json
-{
-  "mcpServers": {
-    "video-editing": {
-      "command": "python",
-      "args": ["/path/to/video-editing-ai-mcp/server.py"]
-    }
-  }
-}
-```
+## 🛡️ Compliance
 
-## Pricing
+This MCP server is built with **EU AI Act compliance** built-in:
 
-| Tier | Limit | Price |
-|------|-------|-------|
-| Free | 30 calls/day | $0 |
-| Pro | Unlimited + premium features | $9/mo |
-| Enterprise | Custom + SLA + support | Contact us |
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-## License
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-MIT
+## 🏢 Enterprise
+
+Need custom development, SLA guarantees, or white-label deployment?
+
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
+
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
+
+## 🤝 Part of the MEOK Ecosystem
+
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
