@@ -1,0 +1,28 @@
+{
+  "name": "video-editing-ai-mcp",
+  "title": "Video Editing Ai Mcp",
+  "description": "Video Editing Ai MCP server. Tools: split scenes, generate subtitles, thumbnail data. Built by MEOK AI Labs.",
+  "version": "1.0.4",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "split_scenes"
+    },
+    {
+      "name": "generate_subtitles"
+    },
+    {
+      "name": "thumbnail_data"
+    },
+    {
+      "name": "recommend_color_grading"
+    },
+    {
+      "name": "convert_aspect_ratio"
+    }
+  ]
+}

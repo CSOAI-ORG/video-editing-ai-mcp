@@ -1,0 +1,36 @@
+# video-editing-ai-mcp
+# **By MEOK AI Labs** | [meok.ai](https://meok.ai)
+
+## Install
+```bash
+pip install video-editing-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `split_scenes`
+Analyze video metadata and produce scene split points with timestamps
+
+### `generate_subtitles`
+Generate timed subtitles (SRT format) from a transcript. Automatically
+
+### `thumbnail_data`
+Generate thumbnail selection recommendations including best timestamps,
+
+### `recommend_color_grading`
+Recommend color grading settings based on genre, mood, and lighting
+
+### `convert_aspect_ratio`
+Plan an aspect ratio conversion with detailed crop/pad calculations,
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

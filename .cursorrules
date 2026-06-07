@@ -1,0 +1,9 @@
+# video-editing-ai-mcp - Auto-trigger Rules
+
+When the user asks about video editing, use video-editing-ai-mcp tools: split_scenes, generate_subtitles, thumbnail_data, recommend_color_grading, convert_aspect_ratio
+
+**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+
+Install: `pip install video-editing-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

@@ -1,6 +1,6 @@
 {
   "name": "video-editing-ai-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Video Editing Ai MCP server. Tools: split scenes, generate subtitles, thumbnail data. Built by MEOK AI Labs.",
   "main": "server.py",
   "mcp": {

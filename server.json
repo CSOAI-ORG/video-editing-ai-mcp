@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.json",
+  "name": "io.github.CSOAI-ORG/video-editing-ai-mcp",
+  "description": "Video Editing Ai MCP server. Tools: split scenes, generate subtitles, thumbnail data. Built by MEOK AI Labs.",
+  "version": "1.0.4",
+  "repository": {
+    "url": "https://github.com/CSOAI-ORG/video-editing-ai-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "identifier": "video-editing-ai-mcp",
+      "version": "1.0.4",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

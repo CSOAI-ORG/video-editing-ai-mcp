@@ -13,7 +13,6 @@ Run:     python server.py
 
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import hashlib
@@ -398,7 +397,7 @@ def split_scenes(duration_seconds: float, scene_type: str = "dialogue",
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -423,7 +422,7 @@ def generate_subtitles(transcript: str, duration_seconds: float,
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -448,7 +447,7 @@ def thumbnail_data(title: str, duration_seconds: float, scene_count: int = 5,
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -475,7 +474,7 @@ def recommend_color_grading(genre: str = "cinematic", mood: str = "neutral",
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -502,7 +501,7 @@ def convert_aspect_ratio(source_ratio: str = "16:9", target_ratio: str = "9:16",
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -513,5 +512,8 @@ def convert_aspect_ratio(source_ratio: str = "16:9", target_ratio: str = "9:16",
         return {"error": str(e)}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
