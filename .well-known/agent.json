@@ -1,0 +1,68 @@
+{
+  "name": "video-editing-ai-mcp",
+  "description": "Video Editing Ai MCP server. Tools: split scenes, generate subtitles, thumbnail data. Built by MEOK",
+  "url": "https://proofof.ai/scorecard/video-editing-ai-mcp.html",
+  "version": "1.0.4",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "split_scenes",
+      "name": "Split Scenes",
+      "description": "split_scenes via video-editing-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_subtitles",
+      "name": "Generate Subtitles",
+      "description": "generate_subtitles via video-editing-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "thumbnail_data",
+      "name": "Thumbnail Data",
+      "description": "thumbnail_data via video-editing-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "recommend_color_grading",
+      "name": "Recommend Color Grading",
+      "description": "recommend_color_grading via video-editing-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "convert_aspect_ratio",
+      "name": "Convert Aspect Ratio",
+      "description": "convert_aspect_ratio via video-editing-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
