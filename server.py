@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Video Editing AI MCP Server
 ==============================
 AI-powered video editing toolkit for scene analysis, subtitle generation,
